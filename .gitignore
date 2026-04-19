@@ -74,5 +74,8 @@ kordbooks_erp/www/client_portal.html
 # pnpm
 client_portal/.pnpm-debug.log
 
+# Project export files
+**/project_export.md
+
 # Personal utility scripts
-*.zsh
+# *.zsh

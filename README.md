@@ -175,7 +175,7 @@ Pre-commit is configured to use the following tools for checking and formatting 
 - prettier
 - pyupgrade
 
-### github
+### github - run from the kordbooks_erp folder for the custom app
 
 cd /workspace/development/frappe-bench
 
