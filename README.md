@@ -4,6 +4,9 @@ Kordbooks ERP is a custom bookkeeping app built on the Frappe Framework and ERPN
 
 The goal is to reuse ERPNext’s accounting engine while delivering a simpler Kordbooks-specific user experience, workflows, branding, and UK-focused bookkeeping features.
 
+Client portal is the SPA for clients which will have basic functionality for clients. 
+
+
 ## Purpose
 
 This app is intended for UK small limited companies managed by an accountancy practice, including sectors such as:
