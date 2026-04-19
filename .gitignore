@@ -5,6 +5,7 @@ __pycache__/
 *.pyc
 *.py~
 
+
 # Distribution / packaging
 .Python
 develop-eggs/
@@ -23,6 +24,7 @@ wheels/
 tags
 MANIFEST
 
+
 # Environments
 .env
 .venv
@@ -32,9 +34,11 @@ ENV/
 env.bak/
 venv.bak/
 
+
 # Dependency directories
 node_modules/
 jspm_packages/
+
 
 # IDEs and editors
 .vscode/
@@ -48,8 +52,27 @@ jspm_packages/
 .wnf-lang-status
 *debug.log
 
+
 # Helix Editor
 .helix/
 
+
 # Aider AI Chat
 .aider*
+
+
+# SPA build output — generated at build time, not source-controlled
+public/client_portal/
+
+# Generated www entry point — copied from build output
+kordbooks_erp/www/client_portal.html
+
+# Vite cache and temp files
+.vite/
+*.local
+
+# pnpm
+client_portal/.pnpm-debug.log
+
+# Personal utility scripts
+*.zsh
