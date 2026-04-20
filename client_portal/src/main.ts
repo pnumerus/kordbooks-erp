@@ -1,5 +1,16 @@
 import { createApp } from 'vue'
-import './style.css'
+import { createRouter, createWebHistory } from 'vue-router'
+import frappeUI from 'frappe-ui'
 import App from './App.vue'
+import './style.css'
 
-createApp(App).mount('#app')
+const router = createRouter({
+  history: createWebHistory('/client_portal'),
+  routes: [
+    { path: '/', component: () => import('./views/Dashboard.vue') },
+    { path: '/invoices', component: () => import('./views/Invoices.vue') },
+    { path: '/:pathMatch(.*)*', component: () => import('./views/NotFound.vue') },
+  ],
+})
+
+createApp(App).use(router).use(frappeUI).mount('#app')

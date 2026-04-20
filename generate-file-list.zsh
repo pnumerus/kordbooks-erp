@@ -17,7 +17,7 @@ tmp_output=$(mktemp)
 
 # Find all relevant files, excluding common directories
 find . -type f \
-  \( -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx" -o -name "*.css" \
+  \( -name "*.ts" -o -name "*.tsx"  -o -name "*.vue" -o -name "*.js" -o -name "*.jsx" -o -name "*.css" \
   -o -name "*.json" -o -name "*.md" -o -name "*.toml" -o -name "*.yaml" \
   -o -name "*.yml" -o -name "*.html" -o -name "*.env" -o -name ".gitignore" -o -name "*.env.*" \
   -o -name "*.mjs" -o -name "*.config.*" -o -name "*.sql" -o -name ".dev.vars" -o -name "*.dev.vars.*" -o -name "*.cjs" \

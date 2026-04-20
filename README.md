@@ -191,4 +191,4 @@ git push
 
 ## custom pages
 
-Use website pages (kordbooks_erp/www) for client pages and desk pages (kordbooks_erp/page) for staff pages
+Use spa  for client portal and desk pages (kordbooks_erp/page) for staff pages
