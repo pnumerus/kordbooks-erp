@@ -1,6 +1,5 @@
 import { createApp } from 'vue'
 import { createRouter, createWebHistory } from 'vue-router'
-import frappeUI from 'frappe-ui'
 import App from './App.vue'
 import './style.css'
 
@@ -13,4 +12,4 @@ const router = createRouter({
   ],
 })
 
-createApp(App).use(router).use(frappeUI).mount('#app')
+createApp(App).use(router).mount('#app')

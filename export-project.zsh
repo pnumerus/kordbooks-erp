@@ -1,5 +1,7 @@
 #!/bin/zsh
 
+# bash export-project.zsh
+
 set -e  # Exit on any error
 
 OUTPUT_FILE="project_export.md"
@@ -13,6 +15,7 @@ FILE_LIST=(
   "pyproject.toml"
   # "README.md"
   "tailwind.config.js"
+  "client_portal/components.d.ts"
   "client_portal/.gitignore"
   "client_portal/index.html"
   "client_portal/package.json"
@@ -29,7 +32,7 @@ FILE_LIST=(
   "client_portal/tsconfig.json"
   "client_portal/tsconfig.node.json"
   "client_portal/vite.config.ts"
-  # "client_portal/.vscode/extensions.json"
+  "client_portal/.vscode/extensions.json"
 )
 
 

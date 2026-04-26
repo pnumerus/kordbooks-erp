@@ -16,7 +16,11 @@ export default defineConfig(({ command }) => ({
       customCollections: {
         lucide: FileSystemIconLoader(
           './node_modules/lucide-static/icons',
-          svg => svg.replace(/^<svg /, '<svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ')
+          svg =>
+            svg.replace(
+              /^<svg /,
+              '<svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ',
+            ),
         ),
       },
     }),
@@ -47,13 +51,15 @@ export default defineConfig(({ command }) => ({
     },
   },
 
-  base: command === 'build'
-    ? '/assets/kordbooks_erp/client_portal/'
-    : '/',
+  base: command === 'build' ? '/assets/kordbooks_erp/client_portal/' : '/',
 
   build: {
     outDir: path.resolve(__dirname, '..', 'public', 'client_portal'),
     emptyOutDir: true,
+  },
+
+  optimizeDeps: {
+    include: ['frappe-ui > feather-icons', 'showdown', 'engine.io-client'],
   },
 
   resolve: {

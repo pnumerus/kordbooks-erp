@@ -4,8 +4,9 @@ Kordbooks ERP is a custom bookkeeping app built on the Frappe Framework and ERPN
 
 The goal is to reuse ERPNext’s accounting engine while delivering a simpler Kordbooks-specific user experience, workflows, branding, and UK-focused bookkeeping features.
 
-Client portal is the SPA for clients which will have basic functionality for clients. 
+Client portal is the SPA for clients which will have basic functionality for clients.
 
+For accountancy practice, they will continue to use desk but will have custom desk pages
 
 ## Purpose
 
@@ -99,7 +100,7 @@ bench --site development.localhost install-app kordbooks_erp
 
 ## Fixtures
 
-When using Custom Fields, Property Setters, Client Scripts, or other supported customizations that should persist across environments, export them as Fixtures from the app so they can be committed to Git and deployed consistently.
+When using Custom Fields (such as needed to add additional columns to existing doctype mariaDB database), Property Setters, Client Scripts, or other supported customizations that should persist across environments, export them as Fixtures from the app so they can be committed to Git and deployed consistently. 
 
 Example `hooks.py` entry:
 
@@ -189,6 +190,46 @@ git add .
 git commit -m "xxx"
 git push
 
+### to run the frontend client_portal
+
+cd /workspace/development/frappe-bench/apps/kordbooks_erp/client_portal
+
+pnpm dev
+
+### to run the backend kordbooks_erp (this includes the open source ERPnext frappe as well)
+
+
+cd /workspace/development/frappe-bench
+
+bench start
+
+bench --site development.localhost migrate
+bench --site development.localhost clear-cache
+
+
+bench --site development.localhost list-apps
+bench --site development.localhost console
+
+
+http://development.localhost:8000
+Username: Administrator
+pw: admin
+
+
 ## custom pages
 
-Use spa  for client portal and desk pages (kordbooks_erp/page) for staff pages
+Use spa for client portal and desk pages (kordbooks_erp/page) for staff pages
+
+### Folder roles
+
+- `apps/kordbooks_erp/`  
+  The root folder of the custom app repository. It contains the app’s source package, the client portal frontend, project config files, package files, and the main README. This is the main project folder that is committed to Git. 
+
+- `apps/kordbooks_erp/client_portal/`  
+  The frontend SPA for the client portal (clients of the accountancy practice). This folder contains the Vue/Vite application, including views, components, routing, styles, and frontend build configuration. It is mainly for browser-side UI code, while backend and business logic should live in the Frappe app package.
+
+- `apps/kordbooks_erp/kordbooks_erp/`  
+  The main Python package for the Frappe app. This is where app-level backend code and configuration live, including `hooks.py`, `modules.txt`, `public`, `templates`, and `www`. 
+
+- `apps/kordbooks_erp/kordbooks_erp/kordbooks_practice/`  
+  The Frappe module folder for the `Kordbooks Practice` module which is mainly focused for the accountancy practice. This is where module-specific business features should live, such as custom Desk pages, DocTypes, reports, and other code grouped under that module. 

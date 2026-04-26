@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@vueuse/core": "^14.2.1",
-    "frappe-ui": "^0.1.277",
     "vue": "^3.5.32",
     "vue-router": "4.6.4"
   },
