@@ -1,0 +1,25 @@
+{
+ "content": null,
+ "creation": "2026-04-27 23:04:53.750507",
+ "docstatus": 0,
+ "doctype": "Page",
+ "idx": 0,
+ "modified": "2026-04-27 23:04:53.750507",
+ "modified_by": "Administrator",
+ "module": "Kordbooks Practice",
+ "name": "sales-invoice-entry",
+ "owner": "Administrator",
+ "page_name": "sales-invoice-entry",
+ "roles": [
+  {
+   "role": "Administrator"
+  },
+  {
+   "role": "System Manager"
+  }
+ ],
+ "script": null,
+ "standard": "Yes",
+ "style": null,
+ "system_page": 0
+}

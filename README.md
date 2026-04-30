@@ -220,6 +220,8 @@ pw: admin
 
 Use spa for client portal and desk pages (kordbooks_erp/page) for staff pages
 
+Build custom Desk pages for practice staff that provide a simpler, lighter workflow than the standard ERPNext interface, while continuing to use standard ERPNext DocTypes as the underlying data model and extending them through Custom Fields, Property Setters, Client Scripts, and other Frappe-supported customizations rather than modifying core code.
+
 ### Folder roles
 
 - `apps/kordbooks_erp/`  
@@ -233,3 +235,10 @@ Use spa for client portal and desk pages (kordbooks_erp/page) for staff pages
 
 - `apps/kordbooks_erp/kordbooks_erp/kordbooks_practice/`  
   The Frappe module folder for the `Kordbooks Practice` module which is mainly focused for the accountancy practice. This is where module-specific business features should live, such as custom Desk pages, DocTypes, reports, and other code grouped under that module. 
+
+
+  ### Bookkeeping process
+
+  It will be a Bank-statement-led accrual bookkeeping workflow, so payments vouchers and entries will be created based on the bank transactions. 
+
+  in ERPnext, what is the process for Bank-statement-led accrual bookkeeping workflow? Provide me step by step and what doctypes need to be used for each step

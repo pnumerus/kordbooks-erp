@@ -1,5 +1,7 @@
 #!/bin/zsh
 
+# bash generate-file-list.zsh
+
 # Script to generate file list for export-project.zsh
 # Run this to see all source files in your project, then copy the output
 
@@ -19,7 +21,7 @@ tmp_output=$(mktemp)
 find . -type f \
   \( -name "*.ts" -o -name "*.tsx"  -o -name "*.vue" -o -name "*.js" -o -name "*.jsx" -o -name "*.css" \
   -o -name "*.json" -o -name "*.md" -o -name "*.toml" -o -name "*.yaml" \
-  -o -name "*.yml" -o -name "*.html" -o -name "*.env" -o -name ".gitignore" -o -name "*.env.*" \
+  -o -name "*.yml" -o -name "*.py" -o -name "*.html" -o -name "*.env" -o -name ".gitignore" -o -name "*.env.*" \
   -o -name "*.mjs" -o -name "*.config.*" -o -name "*.sql" -o -name ".dev.vars" -o -name "*.dev.vars.*" -o -name "*.cjs" \
   -o -name "_headers" -o -name "*.sh" -o -name "*.conf" \) \
   ! -path "*/node_modules/*" \
@@ -31,6 +33,7 @@ find . -type f \
   ! -path "*/coverage/*" \
   ! -name "pnpm-lock.yaml" \
   ! -name "package-lock.json" \
+  ! -name "__init__.py" \
   ! -name "yarn.lock" \
   | sed 's|^\./||' \
   | while read -r file; do
